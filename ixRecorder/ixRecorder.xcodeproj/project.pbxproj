@@ -301,6 +301,7 @@
 				CA3C2CB91F01422E00D29AF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
