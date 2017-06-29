@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA33C07C1F030F2B00C70018 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33C07B1F030F2B00C70018 /* PlaySoundsViewController.swift */; };
+		CA33C09E1F05154B00C70018 /* playsoundsviewcontroller-audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33C09D1F05154B00C70018 /* playsoundsviewcontroller-audio.swift */; };
 		CA3C2CA91F01422E00D29AF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C2CA81F01422E00D29AF6 /* AppDelegate.swift */; };
 		CA3C2CAB1F01422E00D29AF6 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C2CAA1F01422E00D29AF6 /* RecordSoundsViewController.swift */; };
 		CA3C2CAE1F01422E00D29AF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3C2CAC1F01422E00D29AF6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		CA33C07B1F030F2B00C70018 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		CA33C09D1F05154B00C70018 /* playsoundsviewcontroller-audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "playsoundsviewcontroller-audio.swift"; sourceTree = "<group>"; };
 		CA3C2CA51F01422E00D29AF6 /* ixRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ixRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C2CA81F01422E00D29AF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3C2CAA1F01422E00D29AF6 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				CA33C07B1F030F2B00C70018 /* PlaySoundsViewController.swift */,
 				CA3C2CAF1F01422E00D29AF6 /* Assets.xcassets */,
 				CA3C2CB11F01422E00D29AF6 /* LaunchScreen.storyboard */,
+				CA33C09D1F05154B00C70018 /* playsoundsviewcontroller-audio.swift */,
 				CA3C2CB41F01422E00D29AF6 /* Info.plist */,
 			);
 			path = ixRecorder;
@@ -142,6 +145,7 @@
 				CA3C2CAB1F01422E00D29AF6 /* RecordSoundsViewController.swift in Sources */,
 				CA33C07C1F030F2B00C70018 /* PlaySoundsViewController.swift in Sources */,
 				CA3C2CA91F01422E00D29AF6 /* AppDelegate.swift in Sources */,
+				CA33C09E1F05154B00C70018 /* playsoundsviewcontroller-audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
