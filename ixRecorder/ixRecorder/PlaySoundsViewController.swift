@@ -64,94 +64,9 @@ class PlaySoundsViewController: UIViewController {
     }
     
     
-    @IBAction func fastPlayback(_ sender: Any) {
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: recordedAudioURL)
-            audioPlayer = sound
-            
-            sound.enableRate = true
-            sound.rate = Float(1.5)
-            sound.play()
-            
-            
-            let test = AVAudioUnitTimePitch()
-            test.pitch = 1200
-        } catch {
-            print("Couldn't load or play recording")
-        }
-        
-        
-        
-    }
     
     
-    
-    @IBAction func highPitchPlayback(_ sender: Any) {
-        
-        var recordingSession = AVAudioSession.sharedInstance()
-        
-        do {
-            // Here recordingSession is just a shared instance of AVAudioSession
-            
-            try recordingSession.setCategory(AVAudioSessionCategoryPlayback, with: [.mixWithOthers, .defaultToSpeaker]) // There are several options here - choose what best suits your needs
-            try recordingSession.setActive(true)
-            
-            // I suggest adding notifications here for route and configuration changes
-        }
-        catch {
-            print("Session could not be activated")
-        }
-        
-        let audioEngine = AVAudioEngine()
-        
-        let audioMixer = AVAudioMixerNode()
-        let micMixer = AVAudioMixerNode()
-        let reverb = AVAudioUnitReverb()
-        let echo = AVAudioUnitDelay()
-        let audioPlayerNode = AVAudioPlayerNode()
-        let pitchMixer = AVAudioUnitTimePitch()
-        
-        audioEngine.attach(audioPlayerNode)
-        audioEngine.attach(reverb)
-        audioEngine.attach(echo)
-        audioEngine.attach(audioMixer)
-        audioEngine.attach(micMixer)
-        audioEngine.attach(pitchMixer)
-        
-        audioEngine.connect(audioMixer, to: audioEngine.mainMixerNode, format: nil)
-        audioEngine.connect(echo, to: audioMixer, fromBus: 0, toBus: 0, format: nil)
-        audioEngine.connect(reverb, to: echo, fromBus: 0, toBus: 0, format: nil)
-        audioEngine.connect(micMixer, to: reverb, format: nil)
-        audioEngine.connect(pitchMixer, to: micMixer, fromBus: 0, toBus: 0, format: nil)
-        
-        let playerConnectionPoints = [
-            AVAudioConnectionPoint(node: audioEngine.mainMixerNode, bus: 0),
-            AVAudioConnectionPoint(node: audioMixer, bus: 1)
-        ]
-        
-        audioEngine.connect(audioPlayerNode, to: playerConnectionPoints, fromBus: 0, format: nil)
-        
-        
-        
-    }
-    
-    
-    @IBAction func slowPlayback(_ sender: Any) {
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: recordedAudioURL)
-            audioPlayer = sound
-            
-            sound.enableRate = true
-            sound.rate = Float(0.7)
-            sound.play()
-        } catch {
-            print("Couldn't load or play recording")
-        }
-        
-    }
-    
+
 
     /*
     // MARK: - Navigation
